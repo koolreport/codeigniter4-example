@@ -67,7 +67,7 @@ http://locahost:8080/myCodeIgniter/customReport
 
 you will see
 
-![](link to report image)
+![](codeigniter4_combochart.png)
 
 
 # Summary
