@@ -59,10 +59,16 @@ All done!
 
 ## View result
 
-Now you can access:
+First start the PHP built-in server in your CodeIgniter directory:
+
 
 ```
-http://locahost:8080/myCodeIgniter/customReport
+php spark serve
+```
+Then you can access after running
+
+```
+http://locahost:8080/customReport
 ```
 
 you will see
