@@ -5,6 +5,7 @@ This example show you how to implement `FileCache` in your report. FileCache is 
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\cache\FileCache;
 
     function cacheSettings()

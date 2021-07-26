@@ -5,10 +5,11 @@ require "TopCustomersReport.php";
 
 class MainReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\clients \jQuery;
     use \koolreport\core\SubReport;
     
-    function settings()
+    protected function settings()
     {
         return array(
             "subReports"=>array(

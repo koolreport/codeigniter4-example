@@ -8,12 +8,13 @@ use \koolreport\pivot\processes\Pivot;
 use \koolreport\pivot\PivotExcelExport;
 use \koolreport\pivot\processes\PivotExtract;
 
-class SalesPivotExtract extends koolreport\KoolReport
+class SalesPivotExtract extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\excel\ExcelExportable;
     use \koolreport\export\Exportable;
   
-    function settings()
+    protected function settings()
     {
         return array(
             "dataSources" => array(

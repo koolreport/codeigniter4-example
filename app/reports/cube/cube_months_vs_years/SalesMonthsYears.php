@@ -9,9 +9,10 @@ use \koolreport\processes\ColumnsSort;
 use \koolreport\processes\ValueMap;
 use \koolreport\cube\processes\Cube;
 
-class SalesMonthsYears extends koolreport\KoolReport
+class SalesMonthsYears extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources" => array(

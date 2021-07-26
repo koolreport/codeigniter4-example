@@ -2,7 +2,8 @@
 
 class ListOrders extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         $config = include __DIR__ . "/../../../config.php";
         return array(

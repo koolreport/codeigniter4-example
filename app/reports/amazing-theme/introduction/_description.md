@@ -7,6 +7,7 @@ In order to use the them in a report, you simply declare like below:
 ```
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\amazing\Theme;
     ...
 }

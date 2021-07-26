@@ -8,9 +8,10 @@ use \koolreport\processes\TimeBucket;
 use \koolreport\processes\Group;
 use \koolreport\processes\Limit;
 
-class SakilaRental extends KoolReport
+class SakilaRental extends \koolreport\KoolReport
 {
-    public function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         //Get default connection from config.php
         $config = include __DIR__ . "/../../../config.php";

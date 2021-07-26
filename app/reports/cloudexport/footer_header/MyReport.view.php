@@ -6,6 +6,12 @@ use \koolreport\widgets\google;
 use \koolreport\widgets\koolphp\Table;
 use \koolreport\core\Utility as Util;
 ?>
+<?php 
+// echo base_url() . "<br>";
+// echo site_url() . "<br>";
+// echo current_url() . "<br>";
+// echo substr(current_url(), 0, strrpos(current_url(), "/")); return;
+?>
 <form method="post">
 	<div class="report-content">
 		<div class="text-center">
@@ -13,9 +19,9 @@ use \koolreport\core\Utility as Util;
 			<p class="lead">
 				This examples show how to set headers and footers for exported PDF
 			</p>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=cloudPDF">
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=cloudPDF">
 				Cloud PDF</button>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=cloudJPG">
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=cloudJPG">
 				Cloud JPG</button>
 		</div>
 		
@@ -64,8 +70,7 @@ use \koolreport\core\Utility as Util;
 				'isStacked' => true,
 				// 'legend' => 'none',
 				'pointShape' => 'circle',
-				'pointSize' => 10,
-				'hAxis' => [
+				'pointSize' => 10,				'hAxis' => [
 					// 'textPosition' => 'none',
 					'showTextEvery' => 4
 				],

@@ -5,6 +5,7 @@ This example show you how to implement `ApcCache` in your report. If your server
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\cache\ApcCache;
 
     function cacheSettings()

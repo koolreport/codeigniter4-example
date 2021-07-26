@@ -5,7 +5,8 @@
 //Step 2: Creating Report class
 class MyReport extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         $config = include __DIR__ . "/../../../config.php";
 

@@ -4,9 +4,10 @@ use \koolreport\processes\Filter;
 use \koolreport\processes\ColumnMeta;
 use \koolreport\pivot\processes\Pivot;
 
-class CustomersCategoriesProducts extends koolreport\KoolReport
+class CustomersCategoriesProducts extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources" => array(

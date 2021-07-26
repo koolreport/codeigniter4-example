@@ -8,11 +8,12 @@ use \koolreport\processes\TimeBucket;
 use \koolreport\processes\Group;
 use \koolreport\processes\Limit;
 
-class SakilaRental extends KoolReport
+class SakilaRental extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\export\Exportable;
     
-    public function settings()
+    protected function settings()
     {
         return array(
             "dataSources"=>array(

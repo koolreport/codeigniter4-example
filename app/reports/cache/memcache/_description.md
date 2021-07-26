@@ -5,6 +5,7 @@ This example show you how to implement `MemCache` in your report. If your server
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\cache\MemCache;
 
     function cacheSettings()

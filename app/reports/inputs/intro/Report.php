@@ -4,6 +4,7 @@
 
 class Report extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\inputs\Bindable;
     use \koolreport\inputs\POSTBinding;
 
@@ -43,7 +44,7 @@ class Report extends \koolreport\KoolReport
         );
     }
 
-    public function settings()
+    protected function settings()
     {
         $config = include __DIR__ . "/../../../config.php";
         return array(

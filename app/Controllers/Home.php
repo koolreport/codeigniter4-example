@@ -50,4 +50,28 @@ class Home extends BaseController
 			include $report_path . "exportExcel.php";
 		};
 	}
+
+	public function exportPDF()
+	{
+		$uri_string = uri_string();
+		$uri_string = rtrim($uri_string, "/");
+		$uri_string = substr($uri_string, 0, strrpos($uri_string, "/"));
+		// echo "uri_string=$uri_string<br>";
+		$report_path = APPPATH . $uri_string . "/";
+		if (file_exists($report_path . "exportPDF.php")) {
+			include $report_path . "exportPDF.php";
+		} 
+	}
+
+	public function exportExcel()
+	{
+		$uri_string = uri_string();
+		$uri_string = rtrim($uri_string, "/");
+		$uri_string = substr($uri_string, 0, strrpos($uri_string, "/"));
+		// echo "uri_string=$uri_string<br>";
+		$report_path = APPPATH . $uri_string . "/";
+		if (file_exists($report_path . "exportExcel.php")) {
+			include $report_path . "exportExcel.php";
+		} 
+	}
 }

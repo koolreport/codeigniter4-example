@@ -77,3 +77,26 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// echo "<pre>" . json_encode($_SERVER, JSON_PRETTY_PRINT) . "</pre>"; 
+if ((!empty($_SERVER['REQUEST_SCHEME']) && $_SERVER['REQUEST_SCHEME'] == 'https') ||
+    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ||
+    (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443')
+) {
+    $protocole = 'https://';
+} else {
+    $protocole = 'http://';
+}
+
+$host = isset($_SERVER['HTTP_HOST']) ? 
+    $_SERVER['HTTP_HOST'] : "localhost";
+$host = $host . "/";
+$script_name = $_SERVER['SCRIPT_NAME'];
+$script_name = str_replace("/index.php", "", $script_name);
+$baseurl = $protocole . $host . $script_name;
+$myappBaseUrl = $baseurl . '/';
+// echo "project="; print_r($project); echo "<br>";
+// echo "baseurl=$baseurl<br>";
+// echo "script_name=$script_name<br>";
+// echo "myappBaseUrl=$myappBaseUrl<br>";
+defined('BASESEURL') || define('BASESEURL', $myappBaseUrl);

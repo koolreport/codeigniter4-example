@@ -9,6 +9,7 @@ use \koolreport\processes\Limit;
 
 class SalesByCustomer extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
   
   function settings()
   {

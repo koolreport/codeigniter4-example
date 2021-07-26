@@ -4,6 +4,7 @@
 //MyReport.php
 class Report extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\visualquery\Bindable;
     ...
 ```

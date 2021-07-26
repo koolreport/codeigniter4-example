@@ -2,7 +2,8 @@
 
 class CitySale extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources"=>array(

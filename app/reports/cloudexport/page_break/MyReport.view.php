@@ -13,9 +13,9 @@ use \koolreport\core\Utility as Util;
 			<p class="lead">
 				This examples show how add <code>page-break</code> to exported PDF.
 			</p>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=cloudPDF">
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=cloudPDF">
 				Cloud PDF</button>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=cloudJPG">
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=cloudJPG">
 				Cloud JPG</button>
 		</div>
 		

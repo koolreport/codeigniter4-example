@@ -3,9 +3,10 @@
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\excel\BigSpreadsheetExportable;
 
-    function settings()
+    protected function settings()
     {
         return array(
             "dataSources" => array(

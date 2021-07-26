@@ -10,9 +10,10 @@ use \koolreport\processes\ValueMap;
 use \koolreport\cube\processes\Cube;
 use \koolreport\core\Utility;
 
-class SalesQuarters extends koolreport\KoolReport
+class SalesQuarters extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources" => array(

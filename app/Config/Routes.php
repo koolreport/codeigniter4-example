@@ -46,17 +46,29 @@ foreach ($menu as $section_name => $section) {
 				// echo "surl=$surl<br>"; 
 				$routes->get($surl, 'Home::report');
 				$routes->post($surl, 'Home::report');
-				$surl .= "/export";
-				$routes->get($surl, 'Home::export');
-				$routes->post($surl, 'Home::export');
+				$surlExport = "$surl/export";
+				$routes->get($surlExport, 'Home::export');
+				$routes->post($surlExport, 'Home::export');
+				$surlExportPDF = "$surl/exportPDF";
+                $routes->get($surlExportPDF, 'Home::exportPDF');
+				$routes->post($surlExportPDF, 'Home::exportPDF');
+				$surlExportExcel = "$surl/exportExcel";
+                $routes->get($surlExportExcel, 'Home::exportExcel');
+				$routes->post($surlExportExcel, 'Home::exportExcel');
 			} else {
 				foreach ($surl as $tname => $turl) {
 					$turl = rtrim($turl, "/");
 					$routes->get($turl, 'Home::report');
 					$routes->post($turl, 'Home::report');
-					$turl .= "/export";
-					$routes->get($turl, 'Home::export');
-					$routes->post($turl, 'Home::export');
+					$turlExport = "$turl/export";
+					$routes->get($turlExport, 'Home::export');
+					$routes->post($turlExport, 'Home::export');
+                    $turlExportPDF = "$turl/exportPDF";
+                    $routes->get($turlExportPDF, 'Home::exportPDF');
+                    $routes->post($turlExportPDF, 'Home::exportPDF');
+                    $turlExportExcel = "$turl/exportExcel";
+                    $routes->get($turlExportExcel, 'Home::exportExcel');
+                    $routes->post($turlExportExcel, 'Home::exportExcel');
 				}
 			}
 		}

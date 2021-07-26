@@ -9,10 +9,11 @@ use \koolreport\pivot\processes\Pivot;
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\export\Exportable;
     use \koolreport\excel\ExcelExportable;
 
-    function settings()
+    protected function settings()
     {
         return array(
             "dataSources" => array(

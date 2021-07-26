@@ -12,8 +12,8 @@
       The extracted table can be used to draw chart or any other purposes.
     </p>
     <div class="form-group">
-      <a href="export.php" class="btn btn-primary">Download PDF</a>
-      <a href="exportExcel.php" class="btn btn-primary">Download Excel</a>
+      <a href="<?php echo str_replace("/index.php", "", current_url()); ?>/export" class="btn btn-primary">Download PDF</a>
+      <a href="<?php echo str_replace("/index.php", "", current_url()); ?>/exportExcel" class="btn btn-primary">Download Excel</a>
     </div>
   </div>
 

@@ -9,6 +9,7 @@ use \koolreport\processes\ColumnMeta;
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     protected function settings()
     {
         return array(

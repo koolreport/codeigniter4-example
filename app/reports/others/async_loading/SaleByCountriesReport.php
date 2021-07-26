@@ -2,7 +2,8 @@
 
 class SaleByCountriesReport extends \koolreport\KoolReport
 {
-    public function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         $config = include __DIR__ . "/../../../config.php";
 

@@ -2,6 +2,7 @@
 
 class CustomerSelecting extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\inputs\Bindable;
     use \koolreport\inputs\POSTBinding;
 
@@ -21,7 +22,7 @@ class CustomerSelecting extends \koolreport\KoolReport
     }
     
     
-    function settings()
+    protected function settings()
     {
         return array(
             "dataSources"=>array(

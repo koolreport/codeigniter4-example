@@ -8,7 +8,8 @@ use \koolreport\processes\Group;
 
 class MyReport extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources" => array(

@@ -5,6 +5,7 @@
 //Step 2: Creating Report class
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\cache\MemCache;
 
     function cacheSettings()
@@ -17,7 +18,7 @@ class MyReport extends \koolreport\KoolReport
         );
     }
 
-    public function settings()
+    protected function settings()
     {
         //Get default connection from config.php
         $config = include __DIR__ . "/../../../config.php";

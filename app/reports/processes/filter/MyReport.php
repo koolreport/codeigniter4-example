@@ -1,13 +1,11 @@
 <?php
-
-
-
 use \koolreport\processes\ColumnMeta;
 use \koolreport\processes\Filter;
 
 //Step 2: Creating Report class
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     protected function settings()
     {
         return array(

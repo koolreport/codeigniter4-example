@@ -27,3 +27,4 @@ $menu = json_decode(file_get_contents(realpath(dirname(__FILE__))."/../reports.j
 // $root_url = "/htdocs/KoolReport/GitHub-examples";
 // $root_url = "/htdocs/testCodeIgniter/public";
 $root_url = base_url();
+// echo "root_url=$root_url<br>";

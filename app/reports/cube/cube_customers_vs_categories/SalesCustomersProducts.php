@@ -7,9 +7,10 @@ use \koolreport\processes\OnlyColumn;
 use \koolreport\processes\Sort;
 use \koolreport\cube\processes\Cube;
 
-class SalesCustomersProducts extends koolreport\KoolReport
+class SalesCustomersProducts extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources" => array(

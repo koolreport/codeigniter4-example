@@ -3,9 +3,10 @@
 
 use \koolreport\processes\Filter;
 
-class Products extends koolreport\KoolReport
+class Products extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources"=>array(

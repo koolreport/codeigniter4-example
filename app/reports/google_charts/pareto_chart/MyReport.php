@@ -2,7 +2,8 @@
 
 class MyReport extends \koolreport\KoolReport
 {
-    public function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources"=>array(

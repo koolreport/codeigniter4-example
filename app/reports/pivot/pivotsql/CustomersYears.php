@@ -2,9 +2,10 @@
 
 use \koolreport\processes\ColumnMeta;
 
-class CustomersYears extends koolreport\KoolReport
+class CustomersYears extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         $config = include __DIR__ . "/../../../config.php";
 

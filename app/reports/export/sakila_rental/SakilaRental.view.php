@@ -7,7 +7,7 @@
     <div class="text-center">
         <h1>Cash In Report</h1>
         <p class="lead">This example show how to export report to PDF</p>
-        <a href="/<?php echo uri_string(); ?>/export" class="btn btn-primary">Download PDF</a>
+        <a href="<?php echo str_replace("/index.php", "", current_url()); ?>/export" class="btn btn-primary">Download PDF</a>
     </div>
     <hr/>
 

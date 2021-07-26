@@ -5,8 +5,9 @@ use \koolreport\processes\Group;
 
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
     use \koolreport\amazing\Theme;
-    function settings()
+    protected function settings()
     {
         //Get default connection from config.php
         $config = include __DIR__ . "/../../../config.php";

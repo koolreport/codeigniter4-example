@@ -6,9 +6,9 @@ use \koolreport\widgets\koolphp\Table;
         <h1>Big Spreadsheet Exporting</h1>
         <p class="lead">Exporting big spreadsheet with template</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=XLSX">Download XLSX</button>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=ODS">Download ODS</button>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export?type=CSV">Download CSV</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=XLSX">Download XLSX</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=ODS">Download ODS</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export?type=CSV">Download CSV</button>
 		</form>
 	</div>
 	<div class='box-container'>

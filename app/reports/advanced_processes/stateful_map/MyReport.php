@@ -12,7 +12,8 @@ use \koolreport\core\Utility as Util;
 //Step 2: Creating Report class
 class MyReport extends \koolreport\KoolReport
 {
-    function settings()
+    use \koolreport\codeigniter\Friendship;
+    protected function settings()
     {
         return array(
             "dataSources" => array(

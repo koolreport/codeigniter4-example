@@ -7,7 +7,7 @@ use \koolreport\widgets\koolphp\Table;
         <h1>Excel Exporting Template</h1>
         <p class="lead">Exporting table with multi-level row groups</p>
 		<form>
-			<button type="submit" class="btn btn-primary" formaction="/<?php echo uri_string(); ?>/export">Download Excel</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export">Download Excel</button>
 		</form>
 	</div>
 	<div class='box-container'>

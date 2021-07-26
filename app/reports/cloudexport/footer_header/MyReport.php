@@ -14,10 +14,11 @@ use \koolreport\core\Utility as Util;
 //Step 2: Creating Report class
 class MyReport extends \koolreport\KoolReport
 {
+    use \koolreport\codeigniter\Friendship;
 	// use \koolreport\clients\Bootstrap;
 	use \koolreport\cloudexport\Exportable;
 	
-    public function settings()
+    protected function settings()
     {
         //Get default connection from config.php
         $config = include __DIR__ . "/../../../config.php";

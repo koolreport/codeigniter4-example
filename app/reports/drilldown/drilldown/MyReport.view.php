@@ -107,7 +107,7 @@
                                     YEAR(paymentDate)=:year
                                     AND
                                     MONTH(paymentDate)=:month 
-                                GROUP BY day
+                                GROUP BY day, paymentDate
                             ")
                             ->params(array(
                                 ":year"=>$params["year"],

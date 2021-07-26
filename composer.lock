@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "896bf39c45711d46465f9d1dc542dad4",
+    "content-hash": "41f6fe97a2bbe31e670337f20201717d",
     "packages": [
         {
             "name": "kint-php/kint",
@@ -79,6 +79,43 @@
                 "source": "https://github.com/kint-php/kint/tree/master"
             },
             "time": "2019-10-17T18:05:24+00:00"
+        },
+        {
+            "name": "koolreport/codeigniter",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koolreport/codeigniter.git",
+                "reference": "d4ffd37c1792b3d11b701a54927ad11571569470"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koolreport/codeigniter/zipball/d4ffd37c1792b3d11b701a54927ad11571569470",
+                "reference": "d4ffd37c1792b3d11b701a54927ad11571569470",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Allow to use KoolReport seamlessly in CodeIgniter",
+            "homepage": "https://www.koolreport.com",
+            "keywords": [
+                "CodeIgniter Report",
+                "Data Report",
+                "KooLReport CodeIgniter",
+                "Reporting Tools",
+                "codeIgniter reporting",
+                "codeIgniter reporting tool",
+                "laravel",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/koolreport/codeigniter/issues",
+                "source": "https://github.com/koolreport/codeigniter/tree/master"
+            },
+            "time": "2019-06-03T08:10:35+00:00"
         },
         {
             "name": "koolreport/core",
@@ -2368,6 +2405,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
