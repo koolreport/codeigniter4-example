@@ -26,7 +26,9 @@ class Home extends BaseController
 		// FCPATH   -> 'path/to/myCodeIgniter/public/'
 		// APPPATH  -> 'path/to/myCodeIgniter/app/'
 		// echo "uri_string=" . uri_string() . "<br>";
-		$report_path = APPPATH . uri_string() . "/";
+		$uri_string = uri_string();
+		$uri_string = rtrim($uri_string, "/");
+		$report_path = APPPATH . $uri_string . "/";
 		ob_start();
 		include $report_path . "run.php";
 		$report_content = ob_get_clean();
