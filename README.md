@@ -26,7 +26,7 @@ composer require koolreport/pro
 
 1. Inside `app` directory, create `reports` subdirectory to hold your reports.
 2. Create `MyReport.php` and `MyReport.view.php` inside `reports` directory. Assign `App\reports` namespace for the report if you want it be autoloaded. Otherwise, you could include the report file directly in your controller. Please see the contents of two files in our repository.
-3. Adding use \koolreport\codeigniter\Friendship to your report like following:
+3. Add \koolreport\codeigniter\Friendship trait to your report like following:
 
 ```
 class MyReport extends \koolreport\KoolReport
