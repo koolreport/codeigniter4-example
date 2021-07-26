@@ -10,10 +10,11 @@ In this repository, we would like to demonstrate how KoolReport can be used in C
 
 ## Installation
 
-Run `composer` command in your CodeIgniter directory to install `koolreport/core`
+Run `composer` command in your CodeIgniter directory to install `koolreport/core` and `koolreport/codeigniter`
 
 ```
 composer require koolreport/core
+composer require koolreport/codeigniter
 ```
 or install `koolreport/pro` if you have a license for it
 
@@ -25,6 +26,15 @@ composer require koolreport/pro
 
 1. Inside `app` directory, create `reports` subdirectory to hold your reports.
 2. Create `MyReport.php` and `MyReport.view.php` inside `reports` directory. Assign `App\reports` namespace for the report if you want it be autoloaded. Otherwise, you could include the report file directly in your controller. Please see the contents of two files in our repository.
+3. Adding use \koolreport\codeigniter\Friendship to your report like following:
+
+```
+class MyReport extends \koolreport\KoolReport
+{
+    use \koolreport\codeigniter\Friendship;
+    ...
+```
+This trait would help the report to publish js, css assets to CodeIgniter's `public` directory in a subdirectory called `asset/koolreport_assets` as well as allow using CodeIgniter's database settings in the report.
 
 ### Create route and action
 
