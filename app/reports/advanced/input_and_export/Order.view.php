@@ -67,10 +67,8 @@
             ));
             ?>
             <div class="text-center">
-                <form method="post" action="export.php">
-                    <input type="hidden" value="<?php echo $this->params["customerNumber"]; ?>" name="customerNumber" />
-                    <button class="btn btn-primary">Export to PDF</button>
-                </form>
+                <input type="hidden" value="<?php echo $this->params["customerNumber"]; ?>" name="customerNumber" />
+                <button class="btn btn-primary" formaction="<?php echo str_replace("/index.php", "", current_url()); ?>/export">Export to PDF</button>
             </div>
         <?php
         }

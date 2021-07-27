@@ -7,7 +7,7 @@
     <div class="text-center">
         <h1>Cash In Report</h1>
         <p class="lead">This example show how to set PDF's custom header and footer</p>
-        <a href="export.php" class="btn btn-primary">Download PDF</a>
+        <a href="<?php echo str_replace("/index.php", "", current_url()); ?>/export" class="btn btn-primary">Download PDF</a>
     </div>
     <hr/>
    
